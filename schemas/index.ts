@@ -1,2 +1,3 @@
-import page from "./page"
-export const schemaTypes = [page]
+import post from "./post"
+import settings from "./settings"
+export const schemaTypes = [post,settings]
