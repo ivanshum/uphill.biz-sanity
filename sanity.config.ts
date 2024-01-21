@@ -9,8 +9,8 @@ const singletonTypes = new Set(["settings"])
 export default defineConfig({
   name: 'default',
   title: 'uphill.biz',
-  projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID as string,
-  dataset: import.meta.env.SANITY_STUDIO_DATASET as string,
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID as string,
+  dataset: process.env.SANITY_STUDIO_DATASET as string,
 
   plugins: [structureTool({
     structure: (S) =>    structure(S)    }), visionTool(), ...(isDev ? devOnlyPlugins : [])],
